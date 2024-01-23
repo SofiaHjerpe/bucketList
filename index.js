@@ -22,4 +22,17 @@ for (let item of newItems) {
 console.log(todoList.children.length);
 let owner = document.querySelector(".owner");
 owner.innerText = "Sofia's";
+let oldItem = document.querySelector("main > p");
+let oldItemParent = document.querySelector("main");
 
+let newItem = document.createElement("p");
+newItem.innerText = "I am the replacement";
+oldItemParent.replaceChild(newItem, oldItem);
+
+let oldElements = document.querySelectorAll(".list p");
+let oldElement = oldElements[2];
+let newElement = document.createElement("p");
+newElement.innerText = "I am the replacement";
+todoList.replaceChild(newElement, oldElement);
+let removeItem = todoList.lastElementChild;
+todoList.removeChild(removeItem);
